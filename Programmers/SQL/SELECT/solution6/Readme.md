@@ -3,7 +3,7 @@
 - `ORDER BY`를 사용하여 첫 번째 정렬조건으로 `NAME ASC`을 주고, 그 정렬된 결과 중에 같은 NAME에 대한 정렬기준으로  `DATETIME DESC`을 준다.
 
 ## Solution
-```bash
+```sql
 SELECT ANIMAL_ID, NAME, DATETIME 
 FROM ANIMAL_INS 
 ORDER BY NAME ASC, DATETIME DESC;
