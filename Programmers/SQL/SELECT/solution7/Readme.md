@@ -5,7 +5,7 @@
 - 정렬 후 `LIMIT`를 사용해서 상위 1개만 조회한다.
 
 ## Solution
-```bash
+```sql
 select NAME 
 from ANIMAL_INS 
 order by DATETIME asc 

@@ -4,6 +4,6 @@
 - SQL에서 `=`이 equal을 나타냄
 
 ## Solution 
-```bash
+```sql
 select ANIMAL_ID, NAME from ANIMAL_INS where INTAKE_CONDITION = 'Sick';
 ```

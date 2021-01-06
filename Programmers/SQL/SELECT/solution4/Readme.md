@@ -4,6 +4,6 @@
 - `<>`이 `not equal`을 나타낸다.
 
 ## Solution 
-```bash
+```sql
 select ANIMAL_ID, NAME from ANIMAL_INS where INTAKE_CONDITION <> 'Aged'
 ```

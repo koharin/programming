@@ -3,6 +3,6 @@
 - `ORDER BY`를 사용하여 `ANIMAL_ID`를 `ASC`(ascending)으로 정렬한다.
 
 ## Solution
-```bash
+```sql
 SELECT ANIMAL_ID, NAME from ANIMAL_INS ORDER BY ANIMAL_ID ASC;
 ```

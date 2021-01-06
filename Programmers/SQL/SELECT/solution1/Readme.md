@@ -9,6 +9,6 @@ ASC: ascending
 DESC: descending
 
 ## solution 
-```bash 
+```sql
 select * from ANIMAL_INS order by ANIMAL_ID asc
 ```
