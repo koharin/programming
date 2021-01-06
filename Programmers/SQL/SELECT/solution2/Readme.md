@@ -1,4 +1,4 @@
-## Access for solution
+## Approach for solution
 `ANIMAL_INS` 테이블에서 `NAME`, `DATETIME`을 `ANIMAL_ID` 기준 역순으로 조회하기
 
 ## Solution
