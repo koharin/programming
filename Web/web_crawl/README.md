@@ -1,15 +1,20 @@
-### selenium & Beautiful Soup 설치
+## Selenium & Beautiful Soup 설치
+### Selenium 설치
 ```bash
 pip install selenium
+```
+### Beautiful Soup 4 설치
+```bash
 pip install bs4
 ```
 
-### Chrome 웹 드라이버
+## Chrome 웹 드라이버
 ```bash 
 Chrome://version
 ```
 - 크롬 버전 확인하고 [chromedriver](https://sites.google.com/a/chromium.org/chromedriver/downloads)를 버전에 맞게 받는다.
 
+## 파일 설명
 ### image.py
 - 이미지 이름 가져옴
 - 새로고침될 때 몇 개 중복 생겨서 `image_list.txt` 사용
