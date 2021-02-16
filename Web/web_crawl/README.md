@@ -7,12 +7,12 @@ pip install selenium
 ```bash
 pip install bs4
 ```
-
+  
 ## Chrome 웹 드라이버
 ```bash 
 Chrome://version
 ```
-- 크롬 버전 확인하고 [chromedriver](https://sites.google.com/a/chromium.org/chromedriver/downloads)를 버전에 맞게 받는다.
+- 크롬 버전 확인하고 [chromedriver](https://sites.google.com/a/chromium.org/chromedriver/downloads)를 버전에 맞게 받는다.  
 
 ## 파일 설명
 ### image.py
