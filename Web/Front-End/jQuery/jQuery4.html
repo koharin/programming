@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head><title>jQuery #4</title></head>
+    <body>
+        <h1>Where do you want to go?</h1>
+        <h2>Travel Destinations</h2>
+        <p>Plan your next adventure.</p>
+        <ul id="destinations">
+            <li>Rome</li>
+            <li>Paris</li>
+            <li class="promo">Rio</li>
+        </ul>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+            $(function(){
+                //$('#destinations > li:first').css('color', 'purple');
+                //$('#destinations > li:last').css('color', 'skyblue');
+                var elem1 = $('#destinations li'); // Descendant Selector
+                var elem2 = $('#destinations').find('li'); // Traversing
+                console.log(elem1);
+                console.log(elem2);
+            });
+        </script>
+    </body>
+</html>

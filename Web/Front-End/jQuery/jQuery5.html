@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>jQUery #5</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    </head>
+    <body>
+        <ul>
+            <li class="vacation">
+                <h2>Hawaiian Vacation</h2>
+                <button type="button" class="btn btn-primary">Get Price</button>
+            </li>
+            <li class="vacation">
+                <h2>Singpapore Vacation</h2>
+                <button type="button" class="btn btn-secondary">Get Price</button>
+            </li>
+        </ul>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script>
+            $(function(){
+                $('button').on('click', function(e){
+                    var price = $('<p>From $399.99</p>');
+                    $(this).closest('.vacation').append(price);
+                    $(this).remove();
+                });
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head><title>jQuery</title></head>
+    <body>
+        <h1>Where do you want to go?</h1>
+        <h2>Travel Destinations</h2>
+        <p>Plan your next adventure.</p>
+        <ul id="destinations">
+            <li>Singapore</li>
+            <li>Budapest</li>
+            <li class="promo">Spain</li>
+        </ul>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+            $(function(){
+                //console.log($('li'));
+                //$('li').text('Orlando'); 모든 li 요소 텍스트 변경
+                //$('#destinations .promo').text('Pari');
+                $('#destinations > li').text('Paris').css('color', 'purple');
+            });
+        </script>
+    </body>
+</html>

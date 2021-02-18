@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head><title>jQuery3</title></head>
+    <body>
+        <h1>Where do you want to go?</h1>
+        <h2>Travel Destinations</h2>
+        <p>Plan you next adventure.</p>
+        <ul id="destinations">
+            <li>Rome</li>
+            <li>
+                <ul id="france">
+                    <li>Paris</li>
+                </ul>
+            </li>
+            <li class="promo">Rio</li>
+        </ul>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+            $(function(){
+                $('#france > li, .promo').text('Singapore');
+            });
+        </script>
+    </body>
+</html>
