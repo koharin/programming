@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <link rel="stylesheet" href="http://poiemaweb.com/assets/css/ajax.css">
+    </head>
+    <body>
+        <div id='content'></div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+            $.ajax({
+                url: "data/data.json",
+                dataType: "json"
+            })
+
+            .done(function(data){
+                var newContent = '';
+                newContent += '<div id="tours">';
+                newContent += '<h1>Guided Tours</h1>';
+                newContent += '<ul>';
+                for(var i = 0; i < data.tours.length; i++){
+                    newContent += '<li class="' + data.tours[i].region + ' tour">';
+                    newContent += '<h2>' + data.tours[i].location + '</h2>';
+                    newContent += '<span class="details">' + data.tours[i].details + '</span>';
+                    newContent += '<button class="book">Book Now</button>';
+                    newContent += '</li>';
+                }
+                newContent += '</ul>';
+                newContent += '</div>';
+
+                $("#content").html(newContent);
+            })
+
+            .fail(function(jqXHR, textStatus, errorThrown){
+                console.log("fail: ", jqXHR);
+            })
+
+            .always(function(data, textStatus, jqXHR){
+                console.log("always: ", data);
+            })
+        </script>
+    </body>
+</html>

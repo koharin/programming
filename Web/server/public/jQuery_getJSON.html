@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <link rel="stylesheet" href="http://poiemaweb.com/assets/css/ajax.css">
+    </head>
+    <body>
+        <div id="content"></div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+            $.getJSON("data/data.json", function(data){
+                var content = '';
+                content += '<div id="tours">';
+                content += '<h1>Guided Tours</h1>';
+                content += '<ul>';
+                for (var i = 0; i < data.tours.length; i++) {
+
+                    content += '<li class="' + data.tours[i].region + ' tour">';
+                    content += '<h2>' + data.tours[i].location + '</h2>';
+                    content += '<span class="details">' + data.tours[i].details + '</span>';
+                    content += '<button class="book">Book Now</button>';
+                    content += '</li>';
+                }
+                content += '</ul></div>';
+                $('#content').html(content);
+            });
+        </script>
+    </body>
+</html>
