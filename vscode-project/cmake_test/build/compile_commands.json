@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/koharin/programming/vscode-project/cmake_test/build",
+  "command": "/bin/c++   -g -std=gnu++11 -o CMakeFiles/cmake_test.dir/main.cpp.o -c /home/koharin/programming/vscode-project/cmake_test/main.cpp",
+  "file": "/home/koharin/programming/vscode-project/cmake_test/main.cpp"
+}
+]
