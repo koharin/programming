@@ -1,0 +1,27 @@
+CREATE TABLE TEACH(
+        c_id VARCHAR2(10),
+        c_id_no NUMBER(1),
+        t_year NUMBER(4) NOT NULL,
+        t_semester NUMBER(1) NOT NULL,
+        t_time NUMBER(1)  NOT NULL,
+        t_max NUMBER(2)  NOT NULL,
+        t_name VARCHAR2(10) NOT NULL,
+        primary key (c_id, c_id_no)
+);
+
+INSERT INTO TEACH VALUES ('M100', 1, 2021, 2, 1, 30, '심준호');
+INSERT INTO TEACH VALUES ('M100', 2, 2021, 2, 2, 30, '심준호');
+INSERT INTO TEACH VALUES ('P100', 1, 2021, 2, 5, 20,'박숙영');
+INSERT INTO TEACH VALUES ('C200', 1, 2021, 2, 1, 20, '채희준');
+INSERT INTO TEACH VALUES ('M300', 1, 2021, 2, 2, 30, '이기용');
+INSERT INTO TEACH VALUES ('C100', 1, 2021, 2, 4, 40, '김주균');
+INSERT INTO TEACH VALUES ('M400', 1, 2021, 2, 3, 40, '문봉희');
+INSERT INTO TEACH VALUES ('M400', 2, 2021, 2, 1, 30, '이광수');
+INSERT INTO TEACH VALUES ('M400', 3, 2021, 2, 2, 30, '정영주');
+INSERT INTO TEACH VALUES ('M500', 1, 2021, 2, 3, 30, '유석종');
+INSERT INTO TEACH VALUES ('C300', 1, 2021, 2, 2, 40, '문봉희');
+INSERT INTO TEACH VALUES ('C300', 2, 2021, 2, 4, 40, '문봉희');
+INSERT INTO TEACH VALUES ('M600', 1, 2021, 2, 2, 30, '박영훈');
+INSERT INTO TEACH VALUES ('C400', 1, 2021, 2, 1, 20, '김윤진');
+INSERT INTO TEACH VALUES ('M700', 1, 2021, 2, 1, 9, '이광수');
+INSERT INTO TEACH VALUES ('M700', 2, 2021, 2, 6, 9, '이광수');

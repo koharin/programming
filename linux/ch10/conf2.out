@@ -1,0 +1,526 @@
+261257  4 -rw-r--r--  1 root root    3028  7월 31  2018 adduser.conf
+261259  4 -rw-r--r--  1 root root     112  1월 10  2014 apg.conf
+261260  4 -rw-r--r--  1 root root     389  4월 18  2016 appstream.conf
+261265 24 -rw-r--r--  1 root root   23444  4월 28  2016 brltty.conf
+261266  8 -rw-r--r--  1 root root    6488  7월 31  2018 ca-certificates.conf
+261157  4 drwxr-xr-x  4 root root    4096  7월 31  2018 dconf
+261268  4 -rw-r--r--  1 root root    2969 11월 11  2015 debconf.conf
+261270  4 -rw-r--r--  1 root root     604  7월  3  2015 deluser.conf
+261273  4 -rw-r--r--  1 root root     280  6월 20  2014 fuse.conf
+261274  4 -rw-r--r--  1 root root     431  4월  6  2018 fwupd.conf
+261275  4 -rw-r--r--  1 root root    2584  2월 19  2016 gai.conf
+261168  4 drwxr-xr-x  5 root root    4096  7월 31  2018 gconf
+261278  8 -rw-r--r--  1 root root    4781  3월 17  2016 hdparm.conf
+261279  4 -rw-r--r--  1 root root      92 10월 23  2015 host.conf
+261285  4 -rw-r--r--  1 root root     771  3월  6  2015 insserv.conf
+261321  4 -rw-r--r--  1 root root     110 10월  5 15:52 kernel-img.conf
+261289  4 -rw-r--r--  1 root root    1308  3월 11  2016 kerneloops.conf
+261291  4 -rw-r--r--  1 root root      34  1월 27  2016 ld.so.conf
+261293  4 -rw-r--r--  1 root root      27  1월  8  2015 libao.conf
+261294  4 -rw-r--r--  1 root root     191  1월 19  2016 libaudit.conf
+261300  4 -rw-r--r--  1 root root     703  5월  6  2015 logrotate.conf
+261302 16 -rw-r--r--  1 root root   14867  4월 12  2016 ltrace.conf
+261310  4 -rw-r--r--  1 root root     967 10월 30  2015 mke2fs.conf
+261312  4 -rw-r--r--  1 root root     624  8월  8  2007 mtools.conf
+261315  4 -rw-r--r--  1 root root     529  7월 31  2018 nsswitch.conf
+261317  4 -rw-r--r--  1 root root     552  3월 17  2016 pam.conf
+261320  8 -rw-r--r--  1 root root    7649  7월 31  2018 pnm2ppa.conf
+261835  4 -rw-rw-r--  1 root root     350 10월  5 15:51 popularity-contest.conf
+261327  0 lrwxrwxrwx  1 root root      29 10월  5 15:43 resolv.conf -> ../run/resolvconf/resolv.conf
+261225  4 drwxr-xr-x  5 root root    4096  7월 31  2018 resolvconf
+261330  4 -rw-r--r--  1 root root    1371  1월 28  2016 rsyslog.conf
+261332 12 -rw-r--r--  1 root root   10368 10월  2  2015 sensors3.conf
+261336  4 -rw-r--r--  1 root root    1803 11월  6  2015 signond.conf
+261340  4 -rw-r--r--  1 root root    2084  9월  6  2015 sysctl.conf
+261706  4 -rw-r--r--  1 root root    1309 12월 14 15:07 tpvmlp.conf
+261342  4 -rw-r--r--  1 root root    1260  3월 17  2016 ucf.conf
+261343  4 -rw-r--r--  1 root root     338 11월 18  2014 updatedb.conf
+261345  4 -rw-r--r--  1 root root    1018 10월  6  2015 usb_modeswitch.conf
+261368 4 -rw-r--r-- 1 root root   76  1월 12  2017 NetworkManager.conf
+261370 4 -rw-r--r-- 1 root root 31 11월 17  2017 default-wifi-powersave-on.conf
+261375 4 -rw-r--r-- 1 root root 2836  6월 15  2016 UPower.conf
+261647 0 lrwxrwxrwx 1 root root  45 10월  5 15:39 x86_64-linux-gnu_egl_conf -> /usr/lib/x86_64-linux-gnu/mesa-egl/ld.so.conf
+261648 0 lrwxrwxrwx 1 root root  41 10월  5 15:39 x86_64-linux-gnu_gl_conf -> /usr/lib/x86_64-linux-gnu/mesa/ld.so.conf
+391758 4 -rw-r--r-- 1 root root 127  8월 11  2013 javascript-common.conf
+261665 4 -rw-r--r-- 1 root root 1475  2월 21  2018 parser.conf
+261666 4 -rw-r--r-- 1 root root 1962  2월 21  2018 subdomain.conf
+261703 4 -rw-r--r-- 1 root root  246  2월 21  2018 dconf
+261814 4 -rw-r--r-- 1 root root 1217  5월 25  2018 crashdb.conf
+261819 4 -rw-r--r-- 1 root root  79  4월 15  2016 hud-crashdb.conf
+261820 4 -rw-r--r-- 1 root root 107 11월  5  2015 indicator-appmenu-crashdb.conf
+261821 4 -rw-r--r-- 1 root root 103  4월  7  2016 indicator-sound-crashdb.conf
+261822 4 -rw-r--r-- 1 root root 128  2월  1  2016 libunity-webapps-crashdb.conf
+261823 4 -rw-r--r-- 1 root root 125 11월  6  2015 signon-crashdb.conf
+261824 4 -rw-r--r-- 1 root root  85  2월 22  2018 unity-crashdb.conf
+274861 4 -rw-r--r-- 1 root root  114  2월 28  2019 20snapd.conf
+261843 4 -rw-r--r-- 1 root root  182 11월 11  2015 70debconf
+261847 4 -rw-r--r-- 1 root root 1366  2월 25  2016 accessibility.conf
+261850 4 -rw-r--r-- 1 root root 1753  4월 18  2018 avahi-daemon.conf
+261858 4 -rw-r--r-- 1 root root  397  5월 19  2014 input.conf
+261859 4 -rw-r--r-- 1 root root 3874  9월 28  2015 main.conf
+261860 4 -rw-r--r-- 1 root root  120 12월 25  2012 network.conf
+261861 4 -rw-r--r-- 1 root root  258 12월 25  2012 proximity.conf
+262319 4 -rw-r--r-- 1 root root 1800 10월  6  2014 cracklib.conf
+262348 16 -rw-r--r-- 1 root root 15303  5월  8  2018 cups-browsed.conf
+262349  4 -rw-r--r-- 1 root root  2931  6월 23  2018 cups-files.conf
+262350  8 -rw-r--r-- 1 root root  4630  7월 31  2018 cupsd.conf
+261290  0 -rw------- 1 root lp       0 10월  5 17:24 printers.conf
+262353  4 -rw-r--r-- 1 root root   142  6월 23  2018 snmp.conf
+273243  4 -rw-r----- 1 root lp     535 12월 15 08:15 subscriptions.conf
+261834 0 lrwxrwxrwx 1 root root   30 11월 12 23:33 session.conf -> /usr/share/dbus-1/session.conf
+262586 0 lrwxrwxrwx 1 root root   29 11월 12 23:33 system.conf -> /usr/share/dbus-1/system.conf
+262359  4 -rw-r--r-- 1 root root  1375 11월 18  2014 Mountall.Server.conf
+262360  4 -rw-r--r-- 1 root root  2369  5월 19  2016 Upstart.conf
+262361  4 -rw-r--r-- 1 root root  1144  4월 18  2018 avahi-dbus.conf
+262362  4 -rw-r--r-- 1 root root  1630  9월 12  2017 bluetooth.conf
+262363  4 -rw-r--r-- 1 root root   752  3월 29  2016 com.hp.hplip.conf
+262364  4 -rw-r--r-- 1 root root  1007  3월  8  2016 com.redhat.NewPrinterNotification.conf
+262365  4 -rw-r--r-- 1 root root  1016  3월  8  2016 com.redhat.PrinterDriversInstaller.conf
+262366  4 -rw-r--r-- 1 root root   733 11월  5  2013 com.ubuntu.LanguageSelector.conf
+262367  4 -rw-r--r-- 1 root root   662  3월  7  2017 com.ubuntu.SoftwareProperties.conf
+262368  4 -rw-r--r-- 1 root root   726 11월  4  2015 com.ubuntu.SystemService.conf
+262369  4 -rw-r--r-- 1 root root   766  4월 30  2015 com.ubuntu.USBCreator.conf
+262370  4 -rw-r--r-- 1 root root   929  9월 10  2015 com.ubuntu.WhoopsiePreferences.conf
+262371  4 -rw-r--r-- 1 root root   652  7월 12  2018 dnsmasq.conf
+262372  4 -rw-r--r-- 1 root root   680  7월 13  2017 io.snapcraft.SnapdLoginService.conf
+262374  4 -rw-r--r-- 1 root root   465 11월 17  2017 nm-dispatcher.conf
+262375  4 -rw-r--r-- 1 root root   894  4월 14  2016 nm-pptp-service.conf
+262376  4 -rw-r--r-- 1 root root   434  2월 11  2009 org.debian.apt.conf
+262377  4 -rw-r--r-- 1 root root   917 11월  4  2016 org.freedesktop.Accounts.conf
+262378  4 -rw-r--r-- 1 root root  1569 11월  7  2015 org.freedesktop.ColorManager.conf
+262379  4 -rw-r--r-- 1 root root  1180  4월  1  2017 org.freedesktop.DisplayManager.conf
+262380 12 -rw-r--r-- 1 root root  9662  1월 24  2018 org.freedesktop.ModemManager1.conf
+262381 12 -rw-r--r-- 1 root root 10058 11월 17  2017 org.freedesktop.NetworkManager.conf
+262382  4 -rw-r--r-- 1 root root  1096 11월 18  2011 org.freedesktop.PackageKit-aptd.conf
+262383  4 -rw-r--r-- 1 root root   632  7월 13  2018 org.freedesktop.PolicyKit1.conf
+262384  4 -rw-r--r-- 1 root root  1075 10월 26  2015 org.freedesktop.RealtimeKit1.conf
+262385  4 -rw-r--r-- 1 root root   525  4월  2  2016 org.freedesktop.UDisks2.conf
+262386  4 -rw-r--r-- 1 root root  1555  6월 15  2016 org.freedesktop.UPower.conf
+262387  4 -rw-r--r-- 1 root root  1043  4월  6  2018 org.freedesktop.fwupd.conf
+262388  4 -rw-r--r-- 1 root root   947  4월 12  2016 org.freedesktop.hostname1.conf
+262389  4 -rw-r--r-- 1 root root   937  4월 12  2016 org.freedesktop.locale1.conf
+262390 16 -rw-r--r-- 1 root root 12309  4월 12  2016 org.freedesktop.login1.conf
+262391  4 -rw-r--r-- 1 root root  1604  4월 12  2016 org.freedesktop.network1.conf
+262392  4 -rw-r--r-- 1 root root   953  4월 12  2016 org.freedesktop.resolve1.conf
+262393 12 -rw-r--r-- 1 root root  9720  4월 12  2016 org.freedesktop.systemd1.conf
+262394  4 -rw-r--r-- 1 root root   932  4월 19  2017 org.freedesktop.thermald.conf
+262395  4 -rw-r--r-- 1 root root   947  4월 12  2016 org.freedesktop.timedate1.conf
+262396  4 -rw-r--r-- 1 root root   535  1월  9  2016 org.opensuse.CupsPkHelper.Mechanism.conf
+262397  4 -rw-r--r-- 1 root root  1084  5월  2  2018 pulseaudio-system.conf
+262398  4 -rw-r--r-- 1 root root  1649 10월 16  2017 wpa_supplicant.conf
+262437 4 -rw-r--r-- 1 root root 31  3월 13  2016 ubuntu.conf
+262441 4 -rw-r--r-- 1 root root 1735  1월 14  2016 dhclient.conf
+262444 4 -rw-r--r-- 1 root root 2789  6월  4  2015 resolvconf
+262473 4 -rw-r--r-- 1 root root 2339  8월 17  2016 fonts.conf
+262475  4 -rw-r--r-- 1 root root   223  8월 17  2016 10-antialias.conf
+262476  4 -rw-r--r-- 1 root root   484  8월 17  2016 10-autohint.conf
+262477  4 -rw-r--r-- 1 root root   225  8월 17  2016 10-hinting-full.conf
+262478  4 -rw-r--r-- 1 root root   229  8월 17  2016 10-hinting-medium.conf
+262479  4 -rw-r--r-- 1 root root   229  8월 17  2016 10-hinting-slight.conf
+262480  4 -rw-r--r-- 1 root root   212  8월 17  2016 10-hinting.conf
+262481  4 -rw-r--r-- 1 root root   491  8월 17  2016 10-no-sub-pixel.conf
+262482  4 -rw-r--r-- 1 root root  2010  8월 17  2016 10-scale-bitmap-fonts.conf
+262483  4 -rw-r--r-- 1 root root   489  8월 17  2016 10-sub-pixel-bgr.conf
+262484  4 -rw-r--r-- 1 root root   489  8월 17  2016 10-sub-pixel-rgb.conf
+262485  4 -rw-r--r-- 1 root root   490  8월 17  2016 10-sub-pixel-vbgr.conf
+262486  4 -rw-r--r-- 1 root root   490  8월 17  2016 10-sub-pixel-vrgb.conf
+262487  4 -rw-r--r-- 1 root root   481  8월 17  2016 10-unhinted.conf
+262488  4 -rw-r--r-- 1 root root   526  8월 17  2016 11-lcdfilter-default.conf
+262489  4 -rw-r--r-- 1 root root   524  8월 17  2016 11-lcdfilter-legacy.conf
+262490  4 -rw-r--r-- 1 root root   522  8월 17  2016 11-lcdfilter-light.conf
+262491  4 -rw-r--r-- 1 root root   874  5월 17  2015 20-unhint-small-dejavu-lgc-sans-mono.conf
+262492  4 -rw-r--r-- 1 root root   864  5월 17  2015 20-unhint-small-dejavu-lgc-sans.conf
+262493  4 -rw-r--r-- 1 root root   866  5월 17  2015 20-unhint-small-dejavu-lgc-serif.conf
+262494  4 -rw-r--r-- 1 root root   866  5월 17  2015 20-unhint-small-dejavu-sans-mono.conf
+262495  4 -rw-r--r-- 1 root root   856  5월 17  2015 20-unhint-small-dejavu-sans.conf
+262496  4 -rw-r--r-- 1 root root   858  5월 17  2015 20-unhint-small-dejavu-serif.conf
+262497  4 -rw-r--r-- 1 root root  1259  8월 17  2016 20-unhint-small-vera.conf
+262502  4 -rw-r--r-- 1 root root  3256  8월 17  2016 25-unhint-nonlatin.conf
+262503 16 -rw-r--r-- 1 root root 13489  1월 18  2016 30-cjk-aliases.conf
+262504 16 -rw-r--r-- 1 root root 12804  8월 17  2016 30-metric-aliases.conf
+262505  4 -rw-r--r-- 1 root root   701  8월 17  2016 30-urw-aliases.conf
+262509  8 -rw-r--r-- 1 root root  5481  8월 17  2016 40-nonlatin.conf
+262513  8 -rw-r--r-- 1 root root  4621  8월 17  2016 45-latin.conf
+262514  4 -rw-r--r-- 1 root root   545  8월 17  2016 49-sansserif.conf
+262515  4 -rw-r--r-- 1 root root   673  8월 17  2016 50-user.conf
+262516  4 -rw-r--r-- 1 root root   189  8월 17  2016 51-local.conf
+262517  4 -rw-r--r-- 1 root root   608  8월 17  2016 53-monospace-lcd-filter.conf
+262518  4 -rw-r--r-- 1 root root  1509  5월 17  2015 57-dejavu-sans-mono.conf
+262519  4 -rw-r--r-- 1 root root  2011  5월 17  2015 57-dejavu-sans.conf
+262520  4 -rw-r--r-- 1 root root  1649  5월 17  2015 57-dejavu-serif.conf
+262521  4 -rw-r--r-- 1 root root  1545  5월 17  2015 58-dejavu-lgc-sans-mono.conf
+262522  4 -rw-r--r-- 1 root root  2063  5월 17  2015 58-dejavu-lgc-sans.conf
+262523  4 -rw-r--r-- 1 root root  1689  5월 17  2015 58-dejavu-lgc-serif.conf
+262524  4 -rw-r--r-- 1 root root  1798  8월 17  2016 60-latin.conf
+262525  4 -rw-r--r-- 1 root root   185  1월 18  2016 64-01-tlwg-kinnari.conf
+262526  4 -rw-r--r-- 1 root root   184  1월 18  2016 64-02-tlwg-norasi.conf
+262527  4 -rw-r--r-- 1 root root   188  1월 18  2016 64-11-tlwg-waree.conf
+262528  4 -rw-r--r-- 1 root root   187  1월 18  2016 64-12-tlwg-loma.conf
+262529  4 -rw-r--r-- 1 root root   189  1월 18  2016 64-13-tlwg-garuda.conf
+262530  4 -rw-r--r-- 1 root root   189  1월 18  2016 64-14-tlwg-umpush.conf
+262531  4 -rw-r--r-- 1 root root   191  1월 18  2016 64-15-laksaman.conf
+262532  4 -rw-r--r-- 1 root root   190  1월 18  2016 64-21-tlwg-typo.conf
+262533  4 -rw-r--r-- 1 root root   192  1월 18  2016 64-22-tlwg-typist.conf
+262534  4 -rw-r--r-- 1 root root   190  1월 18  2016 64-23-tlwg-mono.conf
+262536  4 -rw-r--r-- 1 root root   470  4월  5  2016 64-language-selector-prefer.conf
+262474  4 drwxr-xr-x 2 root root  4096  7월 31  2018 65-0-fonts-guru-extra.conf
+262539 12 -rw-r--r-- 1 root root 10118  8월 17  2016 65-fonts-persian.conf
+262540  4 -rw-r--r-- 1 root root  1264  4월  4  2015 65-fonts-takao-pgothic.conf
+262541  4 -rw-r--r-- 1 root root   289  8월 17  2016 65-khmer.conf
+262542  8 -rw-r--r-- 1 root root  7959  8월 17  2016 65-nonlatin.conf
+262543  4 -rw-r--r-- 1 root root   621  1월 30  2013 66-lohit-punjabi.conf
+262544  4 -rw-r--r-- 1 root root  1699  4월  5  2016 69-language-selector-zh-cn.conf
+262545  4 -rw-r--r-- 1 root root  1513  4월  5  2016 69-language-selector-zh-hk.conf
+262546  4 -rw-r--r-- 1 root root  1598  4월  5  2016 69-language-selector-zh-mo.conf
+262547  4 -rw-r--r-- 1 root root  1699  4월  5  2016 69-language-selector-zh-sg.conf
+262548  4 -rw-r--r-- 1 root root  2082  4월  5  2016 69-language-selector-zh-tw.conf
+262549  4 -rw-r--r-- 1 root root   672  8월 17  2016 69-unifont.conf
+262550  4 -rw-r--r-- 1 root root   263  8월 17  2016 70-force-bitmaps.conf
+262551  4 -rw-r--r-- 1 root root   263  8월 17  2016 70-no-bitmaps.conf
+262552  4 -rw-r--r-- 1 root root    77  8월 17  2016 70-yes-bitmaps.conf
+262555  4 -rw-r--r-- 1 root root   422  8월 17  2016 80-delicious.conf
+262556  4 -rw-r--r-- 1 root root   747  1월 18  2016 89-tlwg-garuda-synthetic.conf
+262557  4 -rw-r--r-- 1 root root   744  1월 18  2016 89-tlwg-kinnari-synthetic.conf
+262558  4 -rw-r--r-- 1 root root   748  1월 18  2016 89-tlwg-laksaman-synthetic.conf
+262559  4 -rw-r--r-- 1 root root   721  1월 18  2016 89-tlwg-loma-synthetic.conf
+262560  4 -rw-r--r-- 1 root root   738  1월 18  2016 89-tlwg-umpush-synthetic.conf
+262561  4 -rw-r--r-- 1 root root   415  1월 18  2016 89-tlwg-waree-synthetic.conf
+262564  4 -rw-r--r-- 1 root root  1691  8월 17  2016 90-synthetic.conf
+262566  4 -rw-r--r-- 1 root root  1857  7월  1  2014 99-language-selector-zh.conf
+262567 4 -rw-r--r-- 1 root root 689  2월 25  2012 65-0-fonts-guru-extra.conf
+262569 0 lrwxrwxrwx 1 root root  31 10월  5 15:39 10-antialias.conf -> ../conf.avail/10-antialias.conf
+262570 0 lrwxrwxrwx 1 root root  36 10월  5 15:39 10-hinting-slight.conf -> ../conf.avail/10-hinting-slight.conf
+262571 0 lrwxrwxrwx 1 root root  29 10월  5 15:39 10-hinting.conf -> ../conf.avail/10-hinting.conf
+262572 0 lrwxrwxrwx 1 root root  40 10월  5 15:39 10-scale-bitmap-fonts.conf -> ../conf.avail/10-scale-bitmap-fonts.conf
+262573 0 lrwxrwxrwx 1 root root  39 10월  5 15:39 11-lcdfilter-default.conf -> ../conf.avail/11-lcdfilter-default.conf
+262574 0 lrwxrwxrwx 1 root root  55 10월  5 15:39 20-unhint-small-dejavu-lgc-sans-mono.conf -> ../conf.avail/20-unhint-small-dejavu-lgc-sans-mono.conf
+262575 0 lrwxrwxrwx 1 root root  50 10월  5 15:39 20-unhint-small-dejavu-lgc-sans.conf -> ../conf.avail/20-unhint-small-dejavu-lgc-sans.conf
+262576 0 lrwxrwxrwx 1 root root  51 10월  5 15:39 20-unhint-small-dejavu-lgc-serif.conf -> ../conf.avail/20-unhint-small-dejavu-lgc-serif.conf
+262577 0 lrwxrwxrwx 1 root root  51 10월  5 15:39 20-unhint-small-dejavu-sans-mono.conf -> ../conf.avail/20-unhint-small-dejavu-sans-mono.conf
+262578 0 lrwxrwxrwx 1 root root  46 10월  5 15:39 20-unhint-small-dejavu-sans.conf -> ../conf.avail/20-unhint-small-dejavu-sans.conf
+262579 0 lrwxrwxrwx 1 root root  47 10월  5 15:39 20-unhint-small-dejavu-serif.conf -> ../conf.avail/20-unhint-small-dejavu-serif.conf
+262580 0 lrwxrwxrwx 1 root root  39 10월  5 15:39 20-unhint-small-vera.conf -> ../conf.avail/20-unhint-small-vera.conf
+262583 0 lrwxrwxrwx 1 root root  33 10월  5 15:39 30-cjk-aliases.conf -> ../conf.avail/30-cjk-aliases.conf
+262584 0 lrwxrwxrwx 1 root root  36 10월  5 15:39 30-metric-aliases.conf -> ../conf.avail/30-metric-aliases.conf
+262585 0 lrwxrwxrwx 1 root root  33 10월  5 15:39 30-urw-aliases.conf -> ../conf.avail/30-urw-aliases.conf
+262588 0 lrwxrwxrwx 1 root root  30 10월  5 15:39 40-nonlatin.conf -> ../conf.avail/40-nonlatin.conf
+262591 0 lrwxrwxrwx 1 root root  27 10월  5 15:39 45-latin.conf -> ../conf.avail/45-latin.conf
+262592 0 lrwxrwxrwx 1 root root  31 10월  5 15:39 49-sansserif.conf -> ../conf.avail/49-sansserif.conf
+262593 0 lrwxrwxrwx 1 root root  26 10월  5 15:39 50-user.conf -> ../conf.avail/50-user.conf
+262594 0 lrwxrwxrwx 1 root root  27 10월  5 15:39 51-local.conf -> ../conf.avail/51-local.conf
+262595 0 lrwxrwxrwx 1 root root  38 10월  5 15:39 57-dejavu-sans-mono.conf -> ../conf.avail/57-dejavu-sans-mono.conf
+262596 0 lrwxrwxrwx 1 root root  33 10월  5 15:39 57-dejavu-sans.conf -> ../conf.avail/57-dejavu-sans.conf
+262597 0 lrwxrwxrwx 1 root root  34 10월  5 15:39 57-dejavu-serif.conf -> ../conf.avail/57-dejavu-serif.conf
+262598 0 lrwxrwxrwx 1 root root  42 10월  5 15:39 58-dejavu-lgc-sans-mono.conf -> ../conf.avail/58-dejavu-lgc-sans-mono.conf
+262599 0 lrwxrwxrwx 1 root root  37 10월  5 15:39 58-dejavu-lgc-sans.conf -> ../conf.avail/58-dejavu-lgc-sans.conf
+262600 0 lrwxrwxrwx 1 root root  38 10월  5 15:39 58-dejavu-lgc-serif.conf -> ../conf.avail/58-dejavu-lgc-serif.conf
+262601 0 lrwxrwxrwx 1 root root  27 10월  5 15:39 60-latin.conf -> ../conf.avail/60-latin.conf
+262602 0 lrwxrwxrwx 1 root root  37 10월  5 15:39 64-01-tlwg-kinnari.conf -> ../conf.avail/64-01-tlwg-kinnari.conf
+262603 0 lrwxrwxrwx 1 root root  36 10월  5 15:39 64-02-tlwg-norasi.conf -> ../conf.avail/64-02-tlwg-norasi.conf
+262604 0 lrwxrwxrwx 1 root root  35 10월  5 15:39 64-11-tlwg-waree.conf -> ../conf.avail/64-11-tlwg-waree.conf
+262605 0 lrwxrwxrwx 1 root root  34 10월  5 15:39 64-12-tlwg-loma.conf -> ../conf.avail/64-12-tlwg-loma.conf
+262606 0 lrwxrwxrwx 1 root root  36 10월  5 15:39 64-13-tlwg-garuda.conf -> ../conf.avail/64-13-tlwg-garuda.conf
+262607 0 lrwxrwxrwx 1 root root  36 10월  5 15:39 64-14-tlwg-umpush.conf -> ../conf.avail/64-14-tlwg-umpush.conf
+262608 0 lrwxrwxrwx 1 root root  33 10월  5 15:39 64-15-laksaman.conf -> ../conf.avail/64-15-laksaman.conf
+262609 0 lrwxrwxrwx 1 root root  34 10월  5 15:39 64-21-tlwg-typo.conf -> ../conf.avail/64-21-tlwg-typo.conf
+262610 0 lrwxrwxrwx 1 root root  36 10월  5 15:39 64-22-tlwg-typist.conf -> ../conf.avail/64-22-tlwg-typist.conf
+262611 0 lrwxrwxrwx 1 root root  34 10월  5 15:39 64-23-tlwg-mono.conf -> ../conf.avail/64-23-tlwg-mono.conf
+262613 0 lrwxrwxrwx 1 root root  46 10월  5 15:39 64-language-selector-prefer.conf -> ../conf.avail/64-language-selector-prefer.conf
+262568 0 lrwxrwxrwx 1 root root  40 10월  5 15:39 65-0-fonts-guru-extra.conf -> ../conf.avail/65-0-fonts-guru-extra.conf
+262616 0 lrwxrwxrwx 1 root root  35 10월  5 15:39 65-fonts-persian.conf -> ../conf.avail/65-fonts-persian.conf
+262617 0 lrwxrwxrwx 1 root root  41 10월  5 15:39 65-fonts-takao-pgothic.conf -> ../conf.avail/65-fonts-takao-pgothic.conf
+262618 4 -rw-r--r-- 1 root root 428 10월 22  2013 65-khmer.conf
+262619 0 lrwxrwxrwx 1 root root  30 10월  5 15:39 65-nonlatin.conf -> ../conf.avail/65-nonlatin.conf
+262620 0 lrwxrwxrwx 1 root root  35 10월  5 15:39 66-lohit-punjabi.conf -> ../conf.avail/66-lohit-punjabi.conf
+262621 0 lrwxrwxrwx 1 root root  45 10월  5 15:39 69-language-selector-zh-cn.conf -> ../conf.avail/69-language-selector-zh-cn.conf
+262622 0 lrwxrwxrwx 1 root root  45 10월  5 15:39 69-language-selector-zh-hk.conf -> ../conf.avail/69-language-selector-zh-hk.conf
+262623 0 lrwxrwxrwx 1 root root  45 10월  5 15:39 69-language-selector-zh-mo.conf -> ../conf.avail/69-language-selector-zh-mo.conf
+262624 0 lrwxrwxrwx 1 root root  45 10월  5 15:39 69-language-selector-zh-sg.conf -> ../conf.avail/69-language-selector-zh-sg.conf
+262625 0 lrwxrwxrwx 1 root root  45 10월  5 15:39 69-language-selector-zh-tw.conf -> ../conf.avail/69-language-selector-zh-tw.conf
+262626 0 lrwxrwxrwx 1 root root  29 10월  5 15:39 69-unifont.conf -> ../conf.avail/69-unifont.conf
+262627 0 lrwxrwxrwx 1 root root  32 10월  5 15:39 70-no-bitmaps.conf -> ../conf.avail/70-no-bitmaps.conf
+262629 0 lrwxrwxrwx 1 root root  31 10월  5 15:39 80-delicious.conf -> ../conf.avail/80-delicious.conf
+262630 0 lrwxrwxrwx 1 root root  43 10월  5 15:39 89-tlwg-garuda-synthetic.conf -> ../conf.avail/89-tlwg-garuda-synthetic.conf
+262631 0 lrwxrwxrwx 1 root root  44 10월  5 15:39 89-tlwg-kinnari-synthetic.conf -> ../conf.avail/89-tlwg-kinnari-synthetic.conf
+262632 0 lrwxrwxrwx 1 root root  45 10월  5 15:39 89-tlwg-laksaman-synthetic.conf -> ../conf.avail/89-tlwg-laksaman-synthetic.conf
+262633 0 lrwxrwxrwx 1 root root  41 10월  5 15:39 89-tlwg-loma-synthetic.conf -> ../conf.avail/89-tlwg-loma-synthetic.conf
+262634 0 lrwxrwxrwx 1 root root  43 10월  5 15:39 89-tlwg-umpush-synthetic.conf -> ../conf.avail/89-tlwg-umpush-synthetic.conf
+262635 0 lrwxrwxrwx 1 root root  42 10월  5 15:39 89-tlwg-waree-synthetic.conf -> ../conf.avail/89-tlwg-waree-synthetic.conf
+262638 0 lrwxrwxrwx 1 root root  52 10월  5 15:39 90-fonts-nanum.conf -> /usr/share/fontconfig/conf.avail/90-fonts-nanum.conf
+262639 0 lrwxrwxrwx 1 root root  31 10월  5 15:39 90-synthetic.conf -> ../conf.avail/90-synthetic.conf
+262640 0 lrwxrwxrwx 1 root root  42 10월  5 15:39 99-language-selector-zh.conf -> ../conf.avail/99-language-selector-zh.conf
+262641 4 -rw-r--r-- 1 root root 366  5월  8  2018 99pdftoopvp.conf
+262646 4 -rw-r--r-- 1 root root 3397 11월 27  2015 evoldap.conf
+262653 4 -rw-r--r-- 1 root root 475  5월 26  2012 90gs-cjk-resource-cns1.conf
+262654 4 -rw-r--r-- 1 root root 504  5월 26  2012 90gs-cjk-resource-gb1.conf
+262655 4 -rw-r--r-- 1 root root 546  5월 26  2012 90gs-cjk-resource-japan1.conf
+262656 4 -rw-r--r-- 1 root root 387  5월 26  2012 90gs-cjk-resource-japan2.conf
+262657 4 -rw-r--r-- 1 root root 786  2월 23  2014 90gs-cjk-resource-korea1.conf
+262658 4 -rw-r--r-- 1 root root 3996  9월 22  2010 10gsfonts.conf
+262676 4 -rw-r--r-- 1 root root 890  8월  2  2017 im-multipress.conf
+262677 4 -rw-r--r-- 1 root root 890  4월  6  2017 im-multipress.conf
+262679 4 -rw-r--r-- 1 root root 952  7월 31  2018 hplip.conf
+262682 4 -rw-r--r-- 1 root root  338  4월  9  2016 acpid.conf
+262683 4 -rw-r--r-- 1 root root  309  4월 15  2016 alsa-utils.conf
+262684 4 -rw-r--r-- 1 root root  278 12월 29  2014 anacron.conf
+262685 4 -rw-r--r-- 1 root root 3709  3월  4  2017 apparmor.conf
+262686 4 -rw-r--r-- 1 root root 1629  5월 25  2018 apport.conf
+262687 4 -rw-r--r-- 1 root root  207 11월 24  2015 avahi-cups-reload.conf
+262688 4 -rw-r--r-- 1 root root  541 11월 24  2015 avahi-daemon.conf
+262689 4 -rw-r--r-- 1 root root  997  3월  2  2016 bluetooth.conf
+262690 4 -rw-r--r-- 1 root root  328 11월 18  2014 bootmisc.sh.conf
+262691 4 -rw-r--r-- 1 root root  232 11월 18  2014 checkfs.sh.conf
+262692 4 -rw-r--r-- 1 root root  253 11월 18  2014 checkroot-bootclean.sh.conf
+262693 4 -rw-r--r-- 1 root root  307 11월 18  2014 checkroot.sh.conf
+262694 4 -rw-r--r-- 1 root root  250  4월  5  2016 console-font.conf
+262695 4 -rw-r--r-- 1 root root  509  4월  5  2016 console-setup.conf
+262696 4 -rw-r--r-- 1 root root  266  5월 19  2016 console.conf
+262697 4 -rw-r--r-- 1 root root 1122  5월 19  2016 container-detect.conf
+262698 4 -rw-r--r-- 1 root root  356  5월 19  2016 control-alt-delete.conf
+262699 4 -rw-r--r-- 1 root root  297  4월  6  2016 cron.conf
+262702 4 -rw-r--r-- 1 root root  525  5월  8  2018 cups-browsed.conf
+262703 4 -rw-r--r-- 1 root root 1815  6월 23  2018 cups.conf
+262704 4 -rw-r--r-- 1 root root  482  9월  2  2015 dbus.conf
+262705 4 -rw-r--r-- 1 root root  374  8월 20  2016 failsafe-x.conf
+262706 4 -rw-r--r-- 1 root root 1377  5월 19  2016 failsafe.conf
+262707 4 -rw-r--r-- 1 root root  267  5월 19  2016 flush-early-job-log.conf
+262708 4 -rw-r--r-- 1 root root 1247  6월  1  2015 friendly-recovery.conf
+262709 4 -rw-r--r-- 1 root root  186  1월  3  2018 gpu-manager.conf
+262710 4 -rw-r--r-- 1 root root  284  7월 23  2013 hostname.conf
+262711 4 -rw-r--r-- 1 root root  300  5월 21  2014 hostname.sh.conf
+262712 4 -rw-r--r-- 1 root root  561  3월 14  2016 hwclock-save.conf
+262713 4 -rw-r--r-- 1 root root  674  3월 14  2016 hwclock.conf
+262714 4 -rw-r--r-- 1 root root  109  3월 14  2016 hwclock.sh.conf
+262715 4 -rw-r--r-- 1 root root  597  4월 12  2016 irqbalance.conf
+262716 4 -rw-r--r-- 1 root root  689  8월 20  2015 kmod.conf
+262717 4 -rw-r--r-- 1 root root 1444  4월  1  2017 lightdm.conf
+262718 4 -rw-r--r-- 1 root root  268 11월 18  2014 mountall-bootclean.sh.conf
+262719 4 -rw-r--r-- 1 root root  349 11월 18  2014 mountall-net.conf
+262720 4 -rw-r--r-- 1 root root  261 11월 18  2014 mountall-reboot.conf
+262721 4 -rw-r--r-- 1 root root 1201 11월 18  2014 mountall-shell.conf
+262722 4 -rw-r--r-- 1 root root 1232 11월 18  2014 mountall.conf
+262723 4 -rw-r--r-- 1 root root  311 11월 18  2014 mountall.sh.conf
+262724 4 -rw-r--r-- 1 root root  327 11월 18  2014 mountdevsubfs.sh.conf
+262725 4 -rw-r--r-- 1 root root  405 11월 18  2014 mounted-debugfs.conf
+262726 4 -rw-r--r-- 1 root root  730 11월 18  2014 mounted-dev.conf
+262727 4 -rw-r--r-- 1 root root  536 11월 18  2014 mounted-proc.conf
+262728 4 -rw-r--r-- 1 root root  618 11월 18  2014 mounted-run.conf
+262729 4 -rw-r--r-- 1 root root 1890 11월 18  2014 mounted-tmp.conf
+262730 4 -rw-r--r-- 1 root root  903 11월 18  2014 mounted-var.conf
+262731 4 -rw-r--r-- 1 root root  323 11월 18  2014 mountkernfs.sh.conf
+262732 4 -rw-r--r-- 1 root root  249 11월 18  2014 mountnfs-bootclean.sh.conf
+262733 4 -rw-r--r-- 1 root root  313 11월 18  2014 mountnfs.sh.conf
+262734 4 -rw-r--r-- 1 root root  238 11월 18  2014 mtab.sh.conf
+262735 4 -rw-r--r-- 1 root root  530  6월  2  2015 network-interface-container.conf
+262736 4 -rw-r--r-- 1 root root 1756  6월  2  2015 network-interface-security.conf
+262737 4 -rw-r--r-- 1 root root  933  6월  2  2015 network-interface.conf
+262738 4 -rw-r--r-- 1 root root  568  1월 12  2017 network-manager.conf
+262739 4 -rw-r--r-- 1 root root 2493  6월  2  2015 networking.conf
+262740 4 -rw-r--r-- 1 root root  568  2월  2  2016 passwd.conf
+262741 4 -rw-r--r-- 1 root root  363  6월  5  2014 procps-instance.conf
+262742 4 -rw-r--r-- 1 root root  119  6월  6  2014 procps.conf
+262743 4 -rw-r--r-- 1 root root 1543  5월 19  2016 rc-sysinit.conf
+262744 4 -rw-r--r-- 1 root root  661  5월 19  2016 rc.conf
+262745 4 -rw-r--r-- 1 root root  683  5월 19  2016 rcS.conf
+262746 4 -rw-r--r-- 1 root root  457  6월  4  2015 resolvconf.conf
+262747 4 -rw-r--r-- 1 root root  365 11월  3  2014 rfkill-restore.conf
+262748 4 -rw-r--r-- 1 root root  357 11월  3  2014 rfkill-store.conf
+262749 4 -rw-r--r-- 1 root root  426 12월  3  2015 rsyslog.conf
+262750 4 -rw-r--r-- 1 root root  230  4월  5  2016 setvtrgb.conf
+262751 4 -rw-r--r-- 1 root root  277  5월 19  2016 shutdown.conf
+262963 4 -rw-r--r-- 1 root root  641  8월 22  2018 ssh.conf
+262752 4 -rw-r--r-- 1 root root  360  4월 19  2017 thermald.conf
+262753 4 -rw-r--r-- 1 root root  348  5월 19  2016 tty1.conf
+262754 4 -rw-r--r-- 1 root root  333  5월 19  2016 tty2.conf
+262755 4 -rw-r--r-- 1 root root  333  5월 19  2016 tty3.conf
+262756 4 -rw-r--r-- 1 root root  333  5월 19  2016 tty4.conf
+262757 4 -rw-r--r-- 1 root root  232  5월 19  2016 tty5.conf
+262758 4 -rw-r--r-- 1 root root  232  5월 19  2016 tty6.conf
+262760 4 -rw-r--r-- 1 root root  337  4월 12  2016 udev.conf
+262761 4 -rw-r--r-- 1 root root  360  4월 12  2016 udevmonitor.conf
+262762 4 -rw-r--r-- 1 root root  352  4월 12  2016 udevtrigger.conf
+262763 4 -rw-r--r-- 1 root root  473  8월  7  2014 ufw.conf
+262764 4 -rw-r--r-- 1 root root  412  5월 19  2016 upstart-file-bridge.conf
+262765 4 -rw-r--r-- 1 root root  329  5월 19  2016 upstart-socket-bridge.conf
+262766 4 -rw-r--r-- 1 root root  553  5월 19  2016 upstart-udev-bridge.conf
+262767 4 -rw-r--r-- 1 root root  683  2월 24  2015 ureadahead-other.conf
+262768 4 -rw-r--r-- 1 root root  889  2월 24  2015 ureadahead.conf
+262769 4 -rw-r--r-- 1 root root  141 10월  6  2015 usb-modeswitch-upstart.conf
+262770 4 -rw-r--r-- 1 root root 1521  5월 19  2016 wait-for-state.conf
+262771 4 -rw-r--r-- 1 root root  453  7월 28  2017 whoopsie.conf
+262826  8 -rwxr-xr-x 1 root root  4149 11월 24  2015 resolvconf
+262848 4 -rw-r--r--  1 root root 1647  2월 22  2016 initramfs.conf
+262850 4 -rw-r--r--  1 root root  378  2월 17  2014 update-initramfs.conf
+262884 4 -rw-rw-r-- 1 root root  38 11월 24  2014 fakeroot-x86_64-linux-gnu.conf
+263224 4 -rw-r--r-- 1 root root 108  2월  6  2019 i386-linux-gnu.conf
+262885 4 -rw-r--r-- 1 root root  44  1월 27  2016 libc.conf
+271526 4 -rw-r--r-- 1 root root 276 10월  5 17:24 vmware-tools-libraries.conf
+262886 4 -rw-r--r-- 1 root root  68  4월 15  2016 x86_64-linux-gnu.conf
+262887 0 lrwxrwxrwx 1 root root  43 10월  5 15:39 x86_64-linux-gnu_EGL.conf -> /etc/alternatives/x86_64-linux-gnu_egl_conf
+262888 0 lrwxrwxrwx 1 root root  42 10월  5 15:39 x86_64-linux-gnu_GL.conf -> /etc/alternatives/x86_64-linux-gnu_gl_conf
+262889 4 -rw-r--r-- 1 root root 332  5월 25  2018 ldap.conf
+262892 4 -rw-r--r-- 1 root root 4042 10월 19  2016 psprint.conf
+262896 4 -rw-r--r-- 1 root root  452  4월  1  2017 users.conf
+391745 4 -rw-r--r-- 1 root root 56  7월 29  2013 90-javascript-alias.conf
+415814 0 lrwxrwxrwx 1 root root 42 10월 27 17:06 90-javascript-alias.conf -> ../conf-available/90-javascript-alias.conf
+262915 4 -rw-r--r-- 1 root root 2507  7월 31  2015 alsa-base.conf
+262916 4 -rw-r--r-- 1 root root  154  7월  3  2018 amd64-microcode-blacklist.conf
+262917 4 -rw-r--r-- 1 root root  325  3월 13  2016 blacklist-ath_pci.conf
+262918 4 -rw-r--r-- 1 root root  210  3월 13  2016 blacklist-firewire.conf
+262919 4 -rw-r--r-- 1 root root  697  3월 13  2016 blacklist-framebuffer.conf
+262920 4 -rw-r--r-- 1 root root  156  7월 31  2015 blacklist-modem.conf
+262921 0 lrwxrwxrwx 1 root root   41 10월  5 15:39 blacklist-oss.conf -> /lib/linux-sound-base/noOSS.modprobe.conf
+262922 4 -rw-r--r-- 1 root root  583  3월 13  2016 blacklist-rare-network.conf
+262923 4 -rw-r--r-- 1 root root 1077  3월 13  2016 blacklist-watchdog.conf
+262924 4 -rw-r--r-- 1 root root 1603  3월 13  2016 blacklist.conf
+262925 4 -rw-r--r-- 1 root root  390  4월 12  2016 fbdev-blacklist.conf
+262926 4 -rw-r--r-- 1 root root  154  7월  3  2018 intel-microcode-blacklist.conf
+262927 4 -rw-r--r-- 1 root root  347  3월 13  2016 iwlwifi.conf
+262928 4 -rw-r--r-- 1 root root  104  3월 13  2016 mlx4.conf
+262929 4 -rw-r--r-- 1 root root 119  5월  8  2018 cups-filters.conf
+262938 4 -rwxr-xr-x 1 root root  256  6월  4  2015 resolvconf
+262947 4 -rwxr-xr-x 1 root root  817  6월  4  2015 000resolvconf
+263007 4 -rw-r--r-- 1 root root 267  7월 13  2018 50-localauthority.conf
+263008 4 -rw-r--r-- 1 root root  65  7월 13  2018 51-ubuntu-admin.conf
+263009 4 -rw-r--r-- 1 root root 455  7월 13  2018 50-nullbackend.conf
+263025 4 -rwxr-xr-x 1 root root  413  6월  4  2015 000resolvconf
+263028 4 -rwxr-xr-x 1 root root  553  6월  4  2015 000resolvconf
+263036 4 -rw-r--r-- 1 root root 1201  5월  2  2018 client.conf
+263037 4 -rw-r--r-- 1 root root 2282  5월  2  2018 daemon.conf
+263053 0 lrwxrwxrwx 1 root root  20 10월  5 15:39 K01resolvconf -> ../init.d/resolvconf
+263208 0 lrwxrwxrwx 1 root root  20 10월  5 15:39 K01resolvconf -> ../init.d/resolvconf
+263242 0 lrwxrwxrwx 1 root root  20 10월  5 15:39 S05resolvconf -> ../init.d/resolvconf
+263266 4 -rw-r--r-- 1 root root  314  9월  9  2015 20-ufw.conf
+263267 4 -rw-r--r-- 1 root root 1655 12월  3  2015 50-default.conf
+263272 4 -rw-r--r-- 1 root root   25  3월 31  2017 abaton.conf
+263273 4 -rw-r--r-- 1 root root   14  3월 31  2017 agfafocus.conf
+263274 4 -rw-r--r-- 1 root root   24  3월 31  2017 apple.conf
+263275 4 -rw-r--r-- 1 root root   26  3월 31  2017 artec.conf
+263276 8 -rw-r--r-- 1 root root 4140  3월 31  2017 artec_eplus48u.conf
+263277 4 -rw-r--r-- 1 root root  548  3월 31  2017 avision.conf
+263278 4 -rw-r--r-- 1 root root   29  3월 31  2017 bh.conf
+263279 4 -rw-r--r-- 1 root root   26  3월 31  2017 canon.conf
+263280 4 -rw-r--r-- 1 root root  193  3월 31  2017 canon630u.conf
+263281 4 -rw-r--r-- 1 root root 3885  3월 31  2017 canon_dr.conf
+263282 4 -rw-r--r-- 1 root root 1160  3월 31  2017 canon_pp.conf
+263283 4 -rw-r--r-- 1 root root  509  3월 31  2017 cardscan.conf
+263284 4 -rw-r--r-- 1 root root   34  3월 31  2017 coolscan.conf
+263285 4 -rw-r--r-- 1 root root  754  3월 31  2017 coolscan2.conf
+263286 4 -rw-r--r-- 1 root root  754  3월 31  2017 coolscan3.conf
+263287 4 -rw-r--r-- 1 root root  984  3월 31  2017 dc210.conf
+263288 4 -rw-r--r-- 1 root root  984  3월 31  2017 dc240.conf
+263289 4 -rw-r--r-- 1 root root  704  3월 31  2017 dc25.conf
+263290 4 -rw-r--r-- 1 root root  492  3월 31  2017 dell1600n_net.conf
+263291 4 -rw-r--r-- 1 root root 1098  3월 31  2017 dll.conf
+263292 4 -rw-r--r-- 1 root root   12  3월 31  2017 dmc.conf
+263293 4 -rw-r--r-- 1 root root 2569  3월 31  2017 epjitsu.conf
+263294 4 -rw-r--r-- 1 root root  793  3월 31  2017 epson.conf
+263295 4 -rw-r--r-- 1 root root  376  3월 31  2017 epson2.conf
+263296 4 -rw-r--r-- 1 root root  221  3월 31  2017 epsonds.conf
+263297 4 -rw-r--r-- 1 root root 2248  3월 31  2017 fujitsu.conf
+263298 4 -rw-r--r-- 1 root root 2008  3월 31  2017 genesys.conf
+263299 4 -rw-r--r-- 1 root root 1149  3월 31  2017 gphoto2.conf
+263300 8 -rw-r--r-- 1 root root 7795  3월 31  2017 gt68xx.conf
+263301 4 -rw-r--r-- 1 root root  497  3월 31  2017 hp.conf
+263302 4 -rw-r--r-- 1 root root  396  3월 31  2017 hp3900.conf
+263303 4 -rw-r--r-- 1 root root   76  3월 31  2017 hp4200.conf
+263304 4 -rw-r--r-- 1 root root  238  3월 31  2017 hp5400.conf
+263305 4 -rw-r--r-- 1 root root   22  3월 31  2017 hpsj5s.conf
+263306 4 -rw-r--r-- 1 root root   24  3월 31  2017 hs2p.conf
+263307 4 -rw-r--r-- 1 root root   38  3월 31  2017 ibm.conf
+263308 4 -rw-r--r-- 1 root root  367  3월 31  2017 kodak.conf
+263309 4 -rw-r--r-- 1 root root 2599  3월 31  2017 kodakaio.conf
+263310 4 -rw-r--r-- 1 root root  113  3월 31  2017 leo.conf
+263311 4 -rw-r--r-- 1 root root  119  3월 31  2017 lexmark.conf
+263312 4 -rw-r--r-- 1 root root  187  3월 31  2017 ma1509.conf
+263313 4 -rw-r--r-- 1 root root 1254  3월 31  2017 magicolor.conf
+263314 4 -rw-r--r-- 1 root root  666  3월 31  2017 matsushita.conf
+263315 4 -rw-r--r-- 1 root root  268  3월 31  2017 microtek.conf
+263316 4 -rw-r--r-- 1 root root  279  3월 31  2017 microtek2.conf
+263317 4 -rw-r--r-- 1 root root 2125  3월 31  2017 mustek.conf
+263318 4 -rw-r--r-- 1 root root 3824  3월 31  2017 mustek_pp.conf
+263319 4 -rw-r--r-- 1 root root  809  3월 31  2017 mustek_usb.conf
+263320 4 -rw-r--r-- 1 root root   13  3월 31  2017 nec.conf
+263321 4 -rw-r--r-- 1 root root  573  3월 31  2017 net.conf
+263322 4 -rw-r--r-- 1 root root  365  3월 31  2017 p5.conf
+263323 4 -rw-r--r-- 1 root root   75  3월 31  2017 pie.conf
+263324 4 -rw-r--r-- 1 root root  492  3월 31  2017 pixma.conf
+263325 8 -rw-r--r-- 1 root root 4142  3월 31  2017 plustek.conf
+263326 4 -rw-r--r-- 1 root root  943  3월 31  2017 plustek_pp.conf
+263327 4 -rw-r--r-- 1 root root  391  3월 31  2017 qcam.conf
+263328 4 -rw-r--r-- 1 root root   29  3월 31  2017 ricoh.conf
+263329 4 -rw-r--r-- 1 root root  183  3월 31  2017 rts8891.conf
+263330 4 -rw-r--r-- 1 root root   13  3월 31  2017 s9036.conf
+263331 4 -rw-r--r-- 1 root root 1052  3월 31  2017 saned.conf
+263332 4 -rw-r--r-- 1 root root   48  3월 31  2017 sceptre.conf
+263333 4 -rw-r--r-- 1 root root 1464  3월 31  2017 sharp.conf
+263334 4 -rw-r--r-- 1 root root  115  3월 31  2017 sm3840.conf
+263335 4 -rw-r--r-- 1 root root 2239  3월 31  2017 snapscan.conf
+263336 4 -rw-r--r-- 1 root root   10  3월 31  2017 sp15c.conf
+263337 4 -rw-r--r-- 1 root root 2224  3월 31  2017 st400.conf
+263338 4 -rw-r--r-- 1 root root  178  3월 31  2017 stv680.conf
+263339 4 -rw-r--r-- 1 root root   28  3월 31  2017 tamarack.conf
+263340 4 -rw-r--r-- 1 root root  355  3월 31  2017 teco1.conf
+263341 4 -rw-r--r-- 1 root root  636  3월 31  2017 teco2.conf
+263342 4 -rw-r--r-- 1 root root  217  3월 31  2017 teco3.conf
+263343 4 -rw-r--r-- 1 root root 1807  3월 31  2017 test.conf
+263344 4 -rw-r--r-- 1 root root 1495  3월 31  2017 u12.conf
+263345 4 -rw-r--r-- 1 root root 3094  3월 31  2017 umax.conf
+263346 4 -rw-r--r-- 1 root root  386  3월 31  2017 umax1220u.conf
+263347 4 -rw-r--r-- 1 root root 1684  3월 31  2017 umax_pp.conf
+263348 4 -rw-r--r-- 1 root root 3424  3월 31  2017 xerox_mfp.conf
+263352 8 -rw-r--r-- 1 root root 4620  3월 17  2016 access.conf
+263353 4 -rw-r--r-- 1 root root 3635  3월 17  2016 group.conf
+263354 4 -rw-r--r-- 1 root root 2150  3월 17  2016 limits.conf
+263355 4 -rw-r--r-- 1 root root 1440  3월 17  2016 namespace.conf
+263358 4 -rw-r--r-- 1 root root 2972  3월 17  2016 pam_env.conf
+263359 4 -rw-r--r-- 1 root root 1718 10월 27  2015 pwquality.conf
+263360 4 -rw-r--r-- 1 root root  419  3월 17  2016 sepermit.conf
+263361 4 -rw-r--r-- 1 root root 2179  3월 17  2016 time.conf
+263362 4 -rw-r--r-- 1 root root 1888  4월 20  2016 semanage.conf
+263368 4 -rw-r--r-- 1 root root 331  1월 26  2016 accounts.google.com.conf
+263369 4 -rw-r--r-- 1 root root  73  1월 26  2016 login.yahoo.com.conf
+263370 4 -rw-r--r-- 1 root root 151  1월 26  2016 www.facebook.com.conf
+263377 12 -rw-r--r-- 1 root root 9728  2월 19  2016 speechd.conf
+263378 4 -rw-r--r-- 1 root root 116  2월 19  2016 emacs.conf
+263379 4 -rw-r--r-- 1 root root  982  2월 19  2016 cicero.conf
+263380 4 -rw-r--r-- 1 root root 3422  2월 19  2016 dtk-generic.conf
+263381 4 -rw-r--r-- 1 root root 3135  2월 19  2016 epos-generic.conf
+263382 8 -rw-r--r-- 1 root root 5022  2월 19  2016 espeak-generic.conf
+263383 8 -rw-r--r-- 1 root root 6381  2월 19  2016 espeak-mbrola-generic.conf
+263384 4 -rw-r--r-- 1 root root 1624  2월 19  2016 espeak.conf
+263385 4 -rw-r--r-- 1 root root 3087  2월 19  2016 festival.conf
+263386 4 -rw-r--r-- 1 root root  406  2월 19  2016 flite.conf
+263387 8 -rw-r--r-- 1 root root 7857  2월 19  2016 ibmtts.conf
+263388 4 -rw-r--r-- 1 root root  919  2월 19  2016 ivona.conf
+263389 4 -rw-r--r-- 1 root root 2603  2월 19  2016 llia_phon-generic.conf
+263390 4 -rw-r--r-- 1 root root 3306  2월 19  2016 pico-generic.conf
+263391 4 -rw-r--r-- 1 root root 2913  2월 19  2016 swift-generic.conf
+263848 4 -rw-r--r-- 1 root root   77  1월 13  2016 10-console-messages.conf
+263849 4 -rw-r--r-- 1 root root  490  1월 13  2016 10-ipv6-privacy.conf
+263850 4 -rw-r--r-- 1 root root  726  1월 13  2016 10-kernel-hardening.conf
+263851 4 -rw-r--r-- 1 root root  257  1월 13  2016 10-link-restrictions.conf
+263852 4 -rw-r--r-- 1 root root 1184  1월 13  2016 10-magic-sysrq.conf
+263853 4 -rw-r--r-- 1 root root  509  1월 13  2016 10-network-security.conf
+263854 4 -rw-r--r-- 1 root root 1292  1월 13  2016 10-ptrace.conf
+263855 4 -rw-r--r-- 1 root root  506  1월 13  2016 10-zeropage.conf
+273582 0 lrwxrwxrwx 1 root root   14  4월  3  2019 99-sysctl.conf -> ../sysctl.conf
+263861 4 -rw-r--r--  1 root root  720  4월 12  2016 bootchart.conf
+263862 4 -rw-r--r--  1 root root 1011  4월 12  2016 journald.conf
+263863 4 -rw-r--r--  1 root root  986  4월 12  2016 logind.conf
+263864 4 -rw-r--r--  1 root root  610  4월 12  2016 resolved.conf
+263865 4 -rw-r--r--  1 root root 1537  7월 31  2018 system.conf
+263866 4 -rw-r--r--  1 root root  534  4월 12  2016 timesyncd.conf
+263867 4 -rw-r--r--  1 root root 1127  4월 12  2016 user.conf
+263949 4 -rw-r--r-- 1 root root  153  4월 12  2016 udev.conf
+263957 4 -rw-r--r-- 1 root root 1941  4월 15  2016 sysctl.conf
+263958 4 -rw-r--r-- 1 root root  312  7월 31  2018 ufw.conf
+271476  4 -r--r--r-- 1 root root   171 10월  5 17:24 vgauth.conf
+271500   4 -rwxr-xr-x  1 root root    453 10월  5 17:24 guestproxy-ssl.conf
+271444   4 -rwxr-xr-x  1 root root   1314 10월  5 17:24 tpvmlp.conf
+271501   4 -rwxr-xr-x  1 root root     58 10월  5 17:24 vgauth.conf
+263929   4 -rw-r--r--  1 root root    210 10월  5 17:24 vmware-tools-libraries.conf
+271448   4 -rw-r--r--  1 root root    107 10월  5 17:24 vmware-tools-prelink.conf
+263979 4 -rw-r--r-- 1 root root   43  1월  7  2016 Trolltech.conf
+263980 4 -rw-r--r-- 1 root root   67  2월 17  2017 sni-qt.conf
+263981 4 -rw-r--r-- 1 root root  414  3월 28  2018 user-dirs.conf
