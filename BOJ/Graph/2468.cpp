@@ -11,10 +11,10 @@ vector< vector<int> > temp(100, vector<int>(100,0));
 int N;
 
 void search(int x, int y){
-    graph[x][y]=-1; // 방문 표시
+    graph[x][y]=0; // 방문 표시
     queue< pair<int, int> > q;
     q.push(make_pair(x,y));
-    cout << "visit x: " << x << ", y: " << y << endl;
+    //cout << "visit x: " << x << ", y: " << y << endl;
     while(!q.empty()){
         int cx=q.front().first;
         int cy=q.front().second;
@@ -22,10 +22,12 @@ void search(int x, int y){
         for(int i=0; i<4; i++){
             int nx=cx+dx[i];
             int ny=cy+dy[i];
-            if(nx<0 || ny<0 || nx>=N || ny>=N || graph[nx][ny]==-1) continue;
-            q.push(make_pair(nx,ny));
-            graph[nx][ny]=-1;
-            cout << "visit x: " << nx << ", y: " << ny << endl;
+            if(nx<0 || ny<0 || nx>=N || ny>=N) continue;
+            if(graph[nx][ny]==1){
+                q.push(make_pair(nx,ny));
+                graph[nx][ny]=0; // check visited 
+                //cout << "visit x: " << nx << ", y: " << ny << endl;                
+            }
         }
     }
 
@@ -46,7 +48,7 @@ int main(){
         }
     }
     
-    maxx=maxx-1; // maxx까지는 항상 안전지역=0이므로 계산 X
+    //maxx=maxx-1; // maxx까지는 항상 안전지역=0이므로 계산 X
     
     // minn부터 maxx까지 구해봐야 함
     for(int h=minn; h<=maxx; h++){
@@ -54,26 +56,25 @@ int main(){
         graph=temp; // 복원
         for(int m=0; m<N; m++){
             for(int n=0; n<N; n++){
-                if(graph[m][n]==0) graph[m][n]=1; // 비 안오는 경우 0임. 0은 잠기지 않으므로 1로 체크
-                if(graph[m][n]>h) graph[m][n]=1; 
-                
-                else graph[m][n]=-1;
-                cout << graph[m][n] << " ";
+                if(graph[m][n]==0) graph[m][n]=1;
+                else if(graph[m][n]>=h) graph[m][n]=1; // 비 안오는 경우 0임. 0은 잠기지 않으므로 1로 체크
+                else graph[m][n]=0;
+                //cout << graph[m][n] << " ";
             }
-            cout << endl;
+            //cout << endl;
         }
-        cout << "current heigh:" << h << " ";
+        //cout << "current heigh:" << h << " ";
         for(int i=0; i<N; i++){
             for(int j=0; j<N; j++){
-                if(graph[i][j]==-1) continue;
+                if(graph[i][j]==0) continue;
                 search(i,j);
                 count++;
             }
         }
-        cout << "current count:" << count << endl;
+        //cout << "current count:" << count << endl;
         answer=max(answer,count);      
     }
-    cout << endl;
+    //cout << endl;
     cout << answer << endl;
     return 0;
 }
