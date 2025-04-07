@@ -1,0 +1,126 @@
+#include <iostream>
+#include <vector>
+#include <queue>
+#include <cmath>
+#define MAX_N 10
+#define MAX_M 10
+#define MAX_K 100
+
+using namespace std;
+
+int N,M,K;
+// 상,하 우선
+int dx[]={-1,1,0,0};
+int dy[]={0,0,-1,1};
+
+class Sols{
+public:
+    int map[MAX_N+1][MAX_N+1];
+    vector< pair<int,int> > walls;
+    vector< pair<int,int> > participants;
+    pair<int,int> exits;
+    int total_move;
+
+    Sols(){
+        total_move=0;
+        for(int i=1; i<=N; i++){
+            for(int j=1; j<=N; j++) map[i][j]=0;
+        }
+    }
+
+    int calc_distance(int cx, int cy){
+        return abs(cx-exits.first)+abs(cy-exits.second);
+    }
+
+    void step1(){
+        // 상하좌우 최단거리로 이동 (출구까지)
+        // 움직일 수 있는 칸>=2이면, 상하 먼저
+        // 움직일 수 없으면, 움직이지 않음
+        // 한 칸에 2명 이상 참가자 가능
+    
+        for(int i=0; i<participants.size(); i++){
+            int cx=participants[i].first;
+            int cy=participants[i].second;
+            //vector< pair< int, pair<int,int> > > steps;
+            // 현재 참가자 최단거리
+            int min_d=calc_distance(cx,cy);
+            int tx,ty;
+
+            for(int d=0; d<4; d++){
+                // 상,하,좌,우 거리 로깅
+                
+                int nx=cx+dx[d];
+                int ny=cy+dy[d];
+                if(nx<1 || ny<1 || nx>N || ny>N || map[nx][ny]!=0) continue;
+                if(calc_distance(nx,ny)<min_d){
+                    min_d=calc_distance(nx,ny);
+                    tx=nx, ty=ny;
+                }
+            }
+            // distance 기준 오름차순 정렬 후 가장 앞 칸으로 이동(만약 원래 칸이 min이었다면 이동하지 않을 것까지 고려 가능)
+            // min_d인거 상,하,좌,우 순서로 찾음
+            // 원래 좌표가 min_d면 그대로 놔둠
+            if(min_d!=calc_distance(cx,cy)){ 
+                for(int d=0; d<4; d++){
+                    // 한 번 업데이트하고 끝냄
+                    if(calc_distance(cx+dx[d], cy+dy[d])==min_d){
+                        participants[i].first=cx+dx[d];
+                        participants[i].second=cy+dy[d];
+                        break;
+                    }
+                }
+                total_move++;
+            }
+        }
+    }
+    void step2(int x, int y){
+        // 좌측상단이 (x,y)일 때 만들 수 있는 정사각형 늘려가면서 참가자 최소 1명, 출구 포함할 수 있는 정사각형 구하면 break
+        
+    }
+};
+
+int main(){
+    ios_base::sync_with_stdio(false);
+    cin.tie(0); cout.tie(0);
+    Sols* sol=new Sols();
+
+    // inputs
+    cin >> N >> M >> K;
+    for(int i=1; i<=N; i++){
+        for(int j=1; j<=N; j++) {
+            cin >> sol->map[i][j];
+            if(sol->map[i][j]!=0) sol->walls.push_back(make_pair(i,j));
+        }
+    }
+    for(int i=0; i<M; i++){
+        int x,y;
+        cin >> x >> y;
+        sol->participants.push_back(make_pair(x,y));
+        // -로 해서 이동거리를 로깅하고 더해서 abs로 하면 이동거리 합 구하기??
+    }
+    int ex,ey; cin >> ex >> ey;
+    sol->exits=make_pair(ex,ey);
+
+    while(K--){
+        // Step 1. 참가자의 이동 (한 칸)
+        sol->step1();
+        cout << sol->total_move << endl;
+        break;
+        // Step 2. 미로의 회전
+        // 한 명 이상 참가자&출구 포함한 가장 작은 정사각형 잡음
+        for(int i=1; i<=N; i++){ // r좌표 작은 것 우선
+            for(int j=1; j<=N; j++){ // r 동일하면 c좌표 작은 것 우선
+                // 한 명 이상 참가자&출구 포함한 가장 작은 정사각형 찾기
+                //1x1 or 2x2 or 3x3
+                sol->step2(i,j); // 좌측상단이 (i,j)일 때
+            }
+        }
+    }
+    return 0;
+}
+
+/*
+r: x좌표,(행), c: y좌표(열)
+좌상단: (1,1)
+미로: 0(이동 가능한 칸), 1~9(벽, 값은 내구도. 회전할 때 내구도-=1, 내구도==0은 빈칸으로 변경) 출구(도달 시 탈출)
+*/
