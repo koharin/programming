@@ -17,7 +17,11 @@ class Sols{
 public:
     int map[MAX_N+1][MAX_N+1];
     vector< pair<int,int> > walls;
-    vector< pair<int,int> > participants;
+    struct PART{
+        pair<int,int> pos;
+        bool out;
+    };
+    vector<PART> participants;
     pair<int,int> exits;
     int total_move;
 
@@ -31,7 +35,15 @@ public:
     int calc_distance(int cx, int cy){
         return abs(cx-exits.first)+abs(cy-exits.second);
     }
-
+    void update_part(pair<int,int> src, pair<int,int> dst){
+        for(int i=0; i<participants.size(); i++){
+            pair<int,int> p = participants[i].pos;
+            if(p.first==src.first && p.second==src.second){
+                participants[i].pos.first=dst.first;
+                participants[i].pos.second=dst.second;
+            }
+        }
+    }
     void step1(){
         // 상하좌우 최단거리로 이동 (출구까지)
         // 움직일 수 있는 칸>=2이면, 상하 먼저
@@ -39,8 +51,8 @@ public:
         // 한 칸에 2명 이상 참가자 가능
     
         for(int i=0; i<participants.size(); i++){
-            int cx=participants[i].first;
-            int cy=participants[i].second;
+            int cx=participants[i].pos.first;
+            int cy=participants[i].pos.second;
             //vector< pair< int, pair<int,int> > > steps;
             // 현재 참가자 최단거리
             int min_d=calc_distance(cx,cy);
@@ -64,18 +76,66 @@ public:
                 for(int d=0; d<4; d++){
                     // 한 번 업데이트하고 끝냄
                     if(calc_distance(cx+dx[d], cy+dy[d])==min_d){
-                        participants[i].first=cx+dx[d];
-                        participants[i].second=cy+dy[d];
+                        participants[i].pos.first=cx+dx[d];
+                        participants[i].pos.second=cy+dy[d];
                         break;
                     }
                 }
                 total_move++;
             }
+            // exit 도달 여부 확인
+            if(participants[i].pos.first==ex && participants[i].pos.second==ey){
+                participants[i].out=true;
+            }
         }
     }
     void step2(int x, int y){
-        // 좌측상단이 (x,y)일 때 만들 수 있는 정사각형 늘려가면서 참가자 최소 1명, 출구 포함할 수 있는 정사각형 구하면 break
-        
+        int size,i,j; // 어떤 크기일 때인지 알아야 하므로
+        bool e=false, par=false;
+        // temp에다 participant 표시해놓고 있는지 찾기
+        int temp[MAX_N][MAX_N];
+        for(int m=1; m<=N; m++){
+            for(int n=1; n<=N; n++){
+                temp[m][j]=map[m][n];
+            }
+        }
+        for(int m=0; m<participants.size(); m++){
+            temp[participants[i].pos.first][participants[i].pos.second]=-1;
+        }
+        // 좌측상단이 (x,y)일 때 만들 수 있는 정사각형 늘려가면서 참가자 최소 1명, 출구 포함할 수 있는 정사각형 구하면 break(1x1일 땐 있을 수 없으므로 2x2부터)
+        for(size=1; size<N; size++){
+            for(i=x; i<=x+size; i++){
+                for(j=y; j<=y+size; j++){
+                    if(i==ex && j==ey) e=true;
+                    if(temp[i][j]==-1) par=true;
+                    if(e==true && par==true) {
+                        
+                        break;
+                    }
+                    
+                }
+            }
+        }
+        // 둘 다 들어있을 때의 좌측상단과 size 크기
+        cout << "upper left: " << i << "," << j << " size: " << size << endl;
+        // 선택된 정사각형은 시계방향 90도 회전, 그 안에 벽은 내구도 1 깎음
+        // 벽이 있으면 내구도--
+        // 참가자도 돌려야 함
+        // exit도 돌려야 함
+        // 첫 줄
+        for(int m=0,n=size; m<=size; m++,n--){
+            // temp가 -1이었으면, 
+            map[i+0][j+m]=temp[i+n][j+0];
+            if(temp[i+n][j+0]==-1){
+                update_part(make_pair(i+n, j+0), make_pair(i+0, j+m));
+                map[i+0][j+m]=0; // 빈 칸으로 만들어주기 (참가자 있는 자리는 빈 칸임)
+            }
+            if(map[i+0][j+m]!=0){
+                // 벽이면 내구도--
+                
+            }
+        }
+        // 옆
     }
 };
 
@@ -93,9 +153,12 @@ int main(){
         }
     }
     for(int i=0; i<M; i++){
+        sol->PART part;
         int x,y;
         cin >> x >> y;
-        sol->participants.push_back(make_pair(x,y));
+        part.pos=make_pair(x,y);
+        part.out=false;
+        sol->participants.push_back(part);
         // -로 해서 이동거리를 로깅하고 더해서 abs로 하면 이동거리 합 구하기??
     }
     int ex,ey; cin >> ex >> ey;
@@ -105,6 +168,7 @@ int main(){
         // Step 1. 참가자의 이동 (한 칸)
         sol->step1();
         cout << sol->total_move << endl;
+        // 참가자가 출구 도달 시 즉시 탈출
         break;
         // Step 2. 미로의 회전
         // 한 명 이상 참가자&출구 포함한 가장 작은 정사각형 잡음
