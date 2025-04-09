@@ -17,30 +17,41 @@ class Sols{
 public:
     int map[MAX_N+1][MAX_N+1];
     vector< pair<int,int> > walls;
-    struct PART{
-        pair<int,int> pos;
-        bool out;
-    };
-    vector<PART> participants;
+    vector< pair<int,int> > participants;
     pair<int,int> exits;
     int total_move;
+    int x,y,square_size;
 
     Sols(){
-        total_move=0;
+        total_move=x=y=square_size=0;
         for(int i=1; i<=N; i++){
             for(int j=1; j<=N; j++) map[i][j]=0;
         }
     }
-
+    void print(){
+        for(int i=1; i<=N; i++){
+            for(int j=1; j<=N; j++){
+                cout << map[i][j] << " ";
+            }
+            cout << endl;
+        }
+        cout << endl;
+        cout << "exits: " << exits.first << "," << exits.second << endl;
+        cout << "participants\n";
+        for(int i=0; i<participants.size(); i++){
+            cout << "(" << participants[i].first << "," << participants[i].second << ") ";
+        }
+        cout << endl;
+    }
     int calc_distance(int cx, int cy){
         return abs(cx-exits.first)+abs(cy-exits.second);
     }
     void update_part(pair<int,int> src, pair<int,int> dst){
         for(int i=0; i<participants.size(); i++){
-            pair<int,int> p = participants[i].pos;
+            pair<int,int> p = participants[i];
             if(p.first==src.first && p.second==src.second){
-                participants[i].pos.first=dst.first;
-                participants[i].pos.second=dst.second;
+                participants[i].first=dst.first;
+                participants[i].second=dst.second;
             }
         }
     }
@@ -49,10 +60,12 @@ public:
         // 움직일 수 있는 칸>=2이면, 상하 먼저
         // 움직일 수 없으면, 움직이지 않음
         // 한 칸에 2명 이상 참가자 가능
-    
+        
         for(int i=0; i<participants.size(); i++){
-            int cx=participants[i].pos.first;
-            int cy=participants[i].pos.second;
+            int cx=participants[i].first;
+            int cy=participants[i].second;
+            // 참가자가 출구면 이동하지 않음
+            if(cx==exits.first && cy==exits.second) continue;
             //vector< pair< int, pair<int,int> > > steps;
             // 현재 참가자 최단거리
             int min_d=calc_distance(cx,cy);
@@ -75,67 +88,112 @@ public:
             if(min_d!=calc_distance(cx,cy)){ 
                 for(int d=0; d<4; d++){
                     // 한 번 업데이트하고 끝냄
+                    int nx=cx+dx[d];
+                    int ny=cy+dy[d]; 
+                    // 벽인건 빼줘야 함
+                    if(nx<1 || ny<1 || nx>N || ny>N || map[nx][ny]!=0) continue;                   
                     if(calc_distance(cx+dx[d], cy+dy[d])==min_d){
-                        participants[i].pos.first=cx+dx[d];
-                        participants[i].pos.second=cy+dy[d];
+                        participants[i].first=cx+dx[d];
+                        participants[i].second=cy+dy[d];
                         break;
                     }
                 }
                 total_move++;
             }
-            // exit 도달 여부 확인
-            if(participants[i].pos.first==ex && participants[i].pos.second==ey){
-                participants[i].out=true;
-            }
         }
     }
-    void step2(int x, int y){
-        int size,i,j; // 어떤 크기일 때인지 알아야 하므로
-        bool e=false, par=false;
+    void get_square(){
+        int size; // 어떤 크기일 때인지 알아야 하므로
+        //bool e=false, par=false;
         // temp에다 participant 표시해놓고 있는지 찾기
-        int temp[MAX_N][MAX_N];
-        for(int m=1; m<=N; m++){
-            for(int n=1; n<=N; n++){
-                temp[m][j]=map[m][n];
-            }
-        }
-        for(int m=0; m<participants.size(); m++){
-            temp[participants[i].pos.first][participants[i].pos.second]=-1;
-        }
+
         // 좌측상단이 (x,y)일 때 만들 수 있는 정사각형 늘려가면서 참가자 최소 1명, 출구 포함할 수 있는 정사각형 구하면 break(1x1일 땐 있을 수 없으므로 2x2부터)
         for(size=1; size<N; size++){
-            for(i=x; i<=x+size; i++){
-                for(j=y; j<=y+size; j++){
-                    if(i==ex && j==ey) e=true;
-                    if(temp[i][j]==-1) par=true;
-                    if(e==true && par==true) {
-                        
-                        break;
+            for(int i=1; i<=N-size; i++){
+                for(int j=1; j<=N-size; j++){
+                    
+                    // 좌하단
+                    int x2=i+size;
+                    int y2=j+size;
+                    //cout << "(" << i << "," << j << "), (" << x2 << "," << y2 << ")\n";
+                    // exit이 해당 정사각형 안에 없으면 continue -> exit
+                    if(!(i<=exits.first && x2>=exits.first && j<= exits.second && y2>=exits.second)) continue;
+                    // x와 y 범위 안에 참가자 있는지 확인
+                    bool is_participant=false;
+                    for(int p=0; p<participants.size(); p++){
+                        // 범위 안에 있을 때
+                        if(i<=participants[p].first && x2>=participants[p].first && j<=participants[p].second && y2>=participants[p].second){
+                            if(!(participants[p].first==exits.first && participants[p].second==exits.second)){
+                                is_participant=true;
+                            }
+                        }
+                    }
+                    if(is_participant){
+                        // 좌측상단, 정사각형 크기 정보 업데이트
+                        x=i;
+                        y=j;
+                        square_size=size;
+                        return;
                     }
                     
                 }
             }
         }
-        // 둘 다 들어있을 때의 좌측상단과 size 크기
-        cout << "upper left: " << i << "," << j << " size: " << size << endl;
-        // 선택된 정사각형은 시계방향 90도 회전, 그 안에 벽은 내구도 1 깎음
-        // 벽이 있으면 내구도--
-        // 참가자도 돌려야 함
-        // exit도 돌려야 함
-        // 첫 줄
-        for(int m=0,n=size; m<=size; m++,n--){
-            // temp가 -1이었으면, 
-            map[i+0][j+m]=temp[i+n][j+0];
-            if(temp[i+n][j+0]==-1){
-                update_part(make_pair(i+n, j+0), make_pair(i+0, j+m));
-                map[i+0][j+m]=0; // 빈 칸으로 만들어주기 (참가자 있는 자리는 빈 칸임)
-            }
-            if(map[i+0][j+m]!=0){
-                // 벽이면 내구도--
-                
+        
+    }
+    void rotate(){
+        // 벽 있으면 내구도--
+        for(int x1=x; x1<=x+square_size; x1++){
+            for(int y1=y; y1<=y+square_size; y1++){
+                if(map[x1][y1]!=0) map[x1][y1]--;
             }
         }
-        // 옆
+        //map을 temp에 복사
+        int temp[MAX_N+1][MAX_N+1];
+        for(int i=1; i<=N; i++){
+            for(int j=1; j<=N; j++) temp[i][j]=map[i][j];
+        }
+        // 90도 회전
+        for(int x1=x; x1<=x+square_size; x1++){
+            for(int y1=y; y1<=y+square_size; y1++){
+                // x1,y1을 일단 좌측상단에 옮기고
+                int ox=x1-x, oy=y1-y;
+                // 좌측상단회전하면 (0,square_size+1)
+                int rx=oy, ry=square_size+1-ox-1;
+                // 일단 회전하면 x1,y1이면 y1,- 가 됨
+                // 회전한 위치에 원래 값 넣어야 함
+                temp[x+rx][y+ry]=map[x1][y1];
+                // 범위 안에 있으면             
+            }
+        }
+        // 원본에 복사
+        for(int x1=x; x1<=x+square_size; x1++){
+            for(int y1=y; y1<=y+square_size; y1++) map[x1][y1]=temp[x1][y1];
+        }
+        // 참가자 옮기기(범위 안에 있으면)
+        
+        for(int i=0; i<participants.size(); i++){
+            int cx=participants[i].first;
+            int cy=participants[i].second;
+            // 이미 출구에 있어도 출구도 같이 움직이기 때문에 옮겨주기
+            //이미 출구면 항상 출구와 같이 움직이므로 상관없음
+            //if(participants[i].first==exits.first && participants[i].second==exits.second) continue;
+            if(x<=cx && (x+square_size)>=cx && y<=cy && (y+square_size)>=cy){
+                int ox=cx-x, oy=cy-y;
+                // 좌측상단회전하면 (0,square_size+1)
+                int rx=oy, ry=square_size+1-ox-1;
+                participants[i].first=x+rx;
+                participants[i].second=y+ry;             
+            }
+        }
+        // 출구 옮기기
+        if(x<=exits.first && (x+square_size)>=exits.first && y<=exits.second && (y+square_size)>=exits.second){
+            int ox=exits.first-x, oy=exits.second-y;
+            // 좌측상단회전하면 (0,square_size+1)
+            int rx=oy, ry=square_size+1-ox-1;
+            exits.first=x+rx;
+            exits.second=y+ry;            
+        }           
     }
 };
 
@@ -153,12 +211,9 @@ int main(){
         }
     }
     for(int i=0; i<M; i++){
-        sol->PART part;
         int x,y;
         cin >> x >> y;
-        part.pos=make_pair(x,y);
-        part.out=false;
-        sol->participants.push_back(part);
+        sol->participants.push_back(make_pair(x,y));
         // -로 해서 이동거리를 로깅하고 더해서 abs로 하면 이동거리 합 구하기??
     }
     int ex,ey; cin >> ex >> ey;
@@ -166,20 +221,30 @@ int main(){
 
     while(K--){
         // Step 1. 참가자의 이동 (한 칸)
+        //cout << "round " << K << endl;
         sol->step1();
-        cout << sol->total_move << endl;
+        //cout << sol->total_move << endl;
+        //sol->print();
         // 참가자가 출구 도달 시 즉시 탈출
-        break;
+        // 모든 사람이 출구 탈출했으면 종료
+        bool all_escape=true;
+        for(int i=0; i<sol->participants.size(); i++){
+            // 출구는 계속 바뀌는데..?
+            if(!(sol->participants[i].first==sol->exits.first && sol->participants[i].second==sol->exits.second)) all_escape=false;
+        }
+        if(all_escape) break;
+        
         // Step 2. 미로의 회전
         // 한 명 이상 참가자&출구 포함한 가장 작은 정사각형 잡음
-        for(int i=1; i<=N; i++){ // r좌표 작은 것 우선
-            for(int j=1; j<=N; j++){ // r 동일하면 c좌표 작은 것 우선
-                // 한 명 이상 참가자&출구 포함한 가장 작은 정사각형 찾기
-                //1x1 or 2x2 or 3x3
-                sol->step2(i,j); // 좌측상단이 (i,j)일 때
-            }
-        }
+        sol->get_square(); // 좌측상단이 (i,j)일 때
+        //cout << sol->x << ", " << sol->y << " size: " << sol->square_size << endl;
+        // 해당 정사각형으로(좌측상단 x,y 크기 square_size+1) 회전
+        sol->rotate();
+        //sol->print();
+        
     }
+    cout << sol->total_move << "\n";
+    cout << sol->exits.first << " " << sol->exits.second << "\n";
     return 0;
 }
 
